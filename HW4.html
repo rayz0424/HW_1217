@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="HW1217.css">
+	<title></title>
+</head>
+<body>
+	<div id="block" class="block">
+		<h2>Guessing Game</h2>
+		<form>
+			<label>Your Guess(1-100)</label><br>
+			<input type="number" id="num" name="guess" class="input_box">
+		</form>
+		<input type="button" id="guessBtn" value="play" name="play" onclick="guess()" class="button">
+		<table id="table" class="table">
+			<tr>
+				<th>Result</th>
+			</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		var random=Math.floor((Math.random()*100)+1);
+		var min=1;
+		var max=100;
+
+		function guess(){
+			input=document.getElementById("num").value;
+			if(input==random){
+				alert("Bingo!");
+				location.reload();
+			}
+			while(input!=random){
+				if(input>random){
+					if(input<max){
+						max=input;
+					}
+				}if(input<random){
+					if(input>min){
+						min=input;
+					}
+				}
+				var tr=document.createElement("tr");
+				var td=document.createElement("td");
+				var text=document.createTextNode(min+"-"+max);
+				td.appendChild(text);
+				tr.appendChild(td);
+				document.getElementById("table").appendChild(tr);
+				break;
+				}
+			}
+		
+	</script>
+</body>
+</html>

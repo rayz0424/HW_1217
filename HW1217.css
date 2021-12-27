@@ -1,0 +1,30 @@
+.block{
+	background-color: lightgreen;
+	border-style: solid;
+	border-width: 10px;
+	border-color: darkgreen;
+	text-align: center;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+.input_box{
+	font-size: 1.0em;
+	color: gray;
+	font-family: fantasy;
+}
+
+.button:hover{
+	background-color: lightyellow;
+	color: gray;
+}
+
+.table{
+	margin-left: 20%;
+	font-size: 1.5em;
+	color: teal;
+	font-family: all;
+	background-color: lightgray;
+	border-style: solid;
+	border-color: lightyellow;
+}
